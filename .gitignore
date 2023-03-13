@@ -1,0 +1,8 @@
+/.idea/
+/target/
+/*.iml
+/file-uploads/
+/.classpath
+/.project
+/.settings/
+/.dccache
