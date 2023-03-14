@@ -29,7 +29,7 @@ class ConfigurationLoaderTest {
             .build()
             .load()
             .onComplete(testContext.succeeding(c -> testContext.verify(() -> {
-                    Assertions.assertThat(c.encode()).isEqualTo("{\"a\":10,\"b\":{\"b\":2},\"http\":{\"server\":{\"port\":8080},\"health\":{\"enabled\":true,\"path\":\"/health\"}},\"metrics\":{\"micrometer\":{\"enabled\":true,\"prometheus\":{\"path\":\"/metrics\",\"enabled\":true}}},\"tracing\":{\"zipkin\":{\"enabled\":true,\"serviceName\":\"foo\",\"endpoint\":\"http://localhost:8082/zipkin\"}},\"y\":{\"a\":20},\"j\":{\"a\":1,\"b\":\"b\"}}");
+                    Assertions.assertThat(c.encode()).isEqualTo("{\"a\":10,\"b\":{\"b\":2},\"j\":{\"a\":1,\"b\":\"b\"},\"y\":{\"a\":20}}");
                     testContext.completeNow();
                 })
             ));
